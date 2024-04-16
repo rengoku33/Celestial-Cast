@@ -12,7 +12,7 @@ export default function Home() {
   const [weather, setWeather] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=chennai&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`  // API call, key in env
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`  // API call, key in env
 
   const fetchWeather = (e) => {                 // fn which makes the api call
     e.preventDefault()
@@ -44,10 +44,10 @@ export default function Home() {
       </div>
 
       {/* search bar */}
-      <div className='relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 px-4 text-white z-10'>
+      <div className='relative flex justify-between items-center max-w-[777px] w-full m-auto pt-9 px-1 text-white z-10'>
           <form
             onSubmit={fetchWeather}
-            className='flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl'
+            className='flex justify-between items-center w-full m-auto p-2 bg-transparent border border-gray-300 text-white rounded-2xl'
           >
             <div>
               <input

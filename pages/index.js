@@ -57,41 +57,41 @@ export default function Home({initWeather}) {
     };
     // clouds, clear, mist + smoke, haze, dust, fog + sand, snow, rain, drizzle, thunderstorm
     useEffect(() => {
-        if (weather && weather.weather && weather.weather[0].main) {
+        if (weather.weather[0].main) {
             const weatherMain = weather.weather[0].main.toLowerCase();
 
             if (weatherMain.includes('clouds')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/clouds-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/clouds-ups.jpeg');
             }
             else if (weatherMain.includes('clear')) {   //change
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/clear-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/clear-ups.jpeg');
             }
             else if (weatherMain.includes('mist') || weatherMain.includes('smoke')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/mist-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/mist-ups.jpeg');
             }
             else if (weatherMain.includes('haze')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/haze-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/haze-ups.jpeg');
             }
             else if (weatherMain.includes('dust')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/dust-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/dust-ups.jpeg');
             }
             else if (weatherMain.includes('fog') || weatherMain.includes('sand')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/fog-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/fog-ups.jpeg');
             }
             else if (weatherMain.includes('snow')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/snow-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/snow-ups.jpeg');
             }
             else if (weatherMain.includes('rain')) { //change
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/rain-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/rain-ups.jpeg');
             }
             else if (weatherMain.includes('drizzle')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/drizzle-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/drizzle-ups.jpeg');
             }
             else if (weatherMain.includes('thunder storm')) {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/thunder-ups.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/thunder-ups.jpeg');
             }
             else {
-                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/app/images/up33.jpeg');
+                setCurrentWeather('https://raw.githubusercontent.com/rengoku33/Celestial-Cast/main/images/up33.jpeg');
             }
             console.log(weather)
         }

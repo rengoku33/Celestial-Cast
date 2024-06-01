@@ -7,7 +7,7 @@ import { BsSearch } from 'react-icons/bs'
 
 export async function getStaticProps() {
     try {
-        const city = 'chennai'; // Your city
+        const city = 'chennai';
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`;
 
         const response = await axios.get(url);
@@ -17,6 +17,7 @@ export async function getStaticProps() {
             props: {
                 initWeather,
             },
+            revalidate: 3600, // make API call every hour (3600 seconds)
         };
     } catch (error) {
         console.error('Error fetching weather data:', error);
@@ -120,7 +121,7 @@ export default function Home({initWeather}) {
                     <div>
                         <input
                             onChange={(e) => setCity(e.target.value)}
-                            className='bg-transparent border-none text-white focus:outline-none text-3xl w-[777px] placeholder-white'
+                            className='bg-transparent border-none text-white focus:outline-none text-3xl w-[777px] placeholder-white placeholder:flex placeholder:w-[777px] placeholder:items-center placeholder:justify-center placeholder:text-left'
                             type='text'
                             placeholder='Search city'
                         />

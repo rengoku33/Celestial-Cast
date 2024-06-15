@@ -1,7 +1,8 @@
 # A Next JS (React) web application for Weather Forecast
 <h2>Project Demo site: https://celestial-cast.vercel.app/</h2>
 
-A Next JS app which leverages open-weather-API using AXIOS to make the API call. Once the GET request returns a succesful JSON object, it is de-structured and processed in weather component and styled using tailwind css. A simple but highly effective application.
+A simple and yet a highly functional Next JS app with external REST API integration (OpenWeatherMap API) while leveraging Static Site Generation to make the initial API call at build time
+
 
 <h2>Preview</h2>
 
